@@ -1,14 +1,14 @@
 //
 //  Baggings+Parsing.swift
-//  GenesisCore
+//  Baggings
 //
 //  Created by Alejandro Martinez on 25/11/2017.
 //
 
 import Foundation
 
-extension StringProtocol {
-    func split(withWord separator: String) -> [String] {
+public extension StringProtocol {
+    public func split(withWord separator: String) -> [String] {
         var res = [String]()
         
         var current = self.startIndex

@@ -1,19 +1,19 @@
 //
 //  Baggins+Throwing.swift
-//  GenesisCore
+//  Baggings
 //
 //  Created by Alejandro Martinez on 25/11/2017.
 //
 
-extension Optional {
-    struct UnwrappingError: Error {
-        let text: String
+public extension Optional {
+    public struct UnwrappingError: Error {
+        public let text: String
     }
 }
 
 infix operator -?!: AdditionPrecedence
-extension Optional {
-    static func -?! (lhs: Optional<Wrapped>, rhs: String) throws -> Wrapped {
+public extension Optional {
+    public static func -?! (lhs: Optional<Wrapped>, rhs: String) throws -> Wrapped {
         switch lhs {
         case .some(let value):
             return value
@@ -24,14 +24,14 @@ extension Optional {
 }
 
 postfix operator -?!
-extension Optional {
-    static postfix func -?! (lhs: Optional<Wrapped>) throws -> Wrapped {
+public extension Optional {
+    public static postfix func -?! (lhs: Optional<Wrapped>) throws -> Wrapped {
         return try lhs -?! "Error unwrapping optional"
     }
 }
 
 extension Collection {
-    func element(at index: Index) -> Element? {
+    public func element(at index: Index) -> Element? {
         if index < endIndex {
             return self[index]
         } else {
