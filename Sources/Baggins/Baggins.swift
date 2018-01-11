@@ -7,6 +7,18 @@ extension Array {
     }
 }
 
+extension Bool {
+    public func toggled() -> Bool {
+        var copy = self
+        copy.toggle()
+        return copy
+    }
+    
+    public mutating func toggle() {
+        self = !self
+    }
+}
+
 
 extension Array {
     
