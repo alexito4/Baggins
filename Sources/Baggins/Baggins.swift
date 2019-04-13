@@ -56,5 +56,13 @@ extension Array {
     }
 }
 
+extension String {
+    
+    public func contains<C: Sequence>(anyOf array: C) -> Bool where C.Element: StringProtocol {
+        return array.contains(where: { self.contains($0) })
+    }
+    
+}
+
 
 
