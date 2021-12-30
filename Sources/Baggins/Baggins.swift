@@ -1,68 +1,60 @@
 import Foundation
 
-
-extension Array {
-    public func debug() {
+public extension Array {
+    func debug() {
         Swift.print(self)
     }
 }
 
-extension Bool {
-    public func toggled() -> Bool {
+public extension Bool {
+    func toggled() -> Bool {
         var copy = self
         copy.toggle()
         return copy
     }
-    
-    public mutating func toggle() {
+
+    mutating func toggle() {
         self = !self
     }
 }
 
-
-extension Array {
-    
-    public func shifted(by times: Int = 1) -> Array {
+public extension Array {
+    func shifted(by times: Int = 1) -> Array {
         var copy = self
         copy.shift(by: times)
         return copy
     }
-    
-    public mutating func shift(by times: Int = 1) {
-        guard self.count > 1 else {
+
+    mutating func shift(by times: Int = 1) {
+        guard count > 1 else {
             return
         }
         let forward = times > 0
         var pendingTimes = abs(times)
         while pendingTimes > 0 {
             defer { pendingTimes -= 1 }
-            
+
             if forward {
-                let l = self.popLast()!
-                self.insert(l, at: 0)
+                let l = popLast()!
+                insert(l, at: 0)
             } else {
-                let f = self.removeFirst()
-                self.append(f)
+                let f = removeFirst()
+                append(f)
             }
         }
     }
 }
 
-extension Array {
-    public  func chunks(_ chunkSize: Int) -> [[Element]] {
-        return stride(from: 0, to: self.count, by: chunkSize).map {
+public extension Array {
+    func chunks(_ chunkSize: Int) -> [[Element]] {
+        stride(from: 0, to: count, by: chunkSize).map {
             Array(self[$0..<Swift.min($0 + chunkSize, self.count)])
         }
     }
 }
 
-extension String {
-    
-    public func contains<C: Sequence>(anyOf array: C) -> Bool where C.Element: StringProtocol {
-        return array.contains(where: { self.contains($0) })
+public extension String {
+    func contains<C: Sequence>(anyOf array: C) -> Bool where C.Element: StringProtocol {
+        array.contains(where: { self.contains($0) })
     }
-    
 }
-
-
-

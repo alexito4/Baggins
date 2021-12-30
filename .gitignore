@@ -35,3 +35,4 @@ Carthage/Build
 .build/build.db
 .build
 Baggins.xcodeproj/project.xcworkspace/xcshareddata
+.DS_Store

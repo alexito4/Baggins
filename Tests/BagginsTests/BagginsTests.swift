@@ -1,8 +1,7 @@
-import XCTest
 @testable import Baggins
+import XCTest
 
 class BagginsTests: XCTestCase {
-    
     func testToggle() {
         XCTAssertEqual(true.toggled(), false)
         XCTAssertEqual(false.toggled(), true)
@@ -14,7 +13,6 @@ class BagginsTests: XCTestCase {
 }
 
 class ArrayTests: XCTestCase {
-    
     func testShift() {
         XCTAssertEqual([1, 2, 3].shifted(by: 0), [1, 2, 3])
         XCTAssertEqual([1, 2, 3].shifted(by: 1), [3, 1, 2])
@@ -24,14 +22,13 @@ class ArrayTests: XCTestCase {
         XCTAssertEqual([1, 2, 3].shifted(by: 3), [1, 2, 3])
         XCTAssertEqual([1, 2, 3].shifted(by: 4), [3, 1, 2])
     }
-    
+
     static var allTests = [
         ("testShift", testShift),
     ]
 }
 
 class StringTests: XCTestCase {
-    
     func testContains() {
         XCTAssertFalse("some text".contains(anyOf: [] as [String]))
         XCTAssertTrue("some text".contains(anyOf: ["some"]))
@@ -39,5 +36,4 @@ class StringTests: XCTestCase {
         XCTAssertTrue("some text".contains(anyOf: ["none", "text"]))
         XCTAssertFalse("some text".contains(anyOf: ["none", "string"]))
     }
-    
 }
