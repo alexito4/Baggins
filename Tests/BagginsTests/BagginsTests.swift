@@ -28,12 +28,12 @@ class ArrayTests: XCTestCase {
     ]
 }
 
-class StringTests: XCTestCase {
-    func testContains() {
-        XCTAssertFalse("some text".contains(anyOf: [] as [String]))
-        XCTAssertTrue("some text".contains(anyOf: ["some"]))
-        XCTAssertTrue("some text".contains(anyOf: ["some", "text"]))
-        XCTAssertTrue("some text".contains(anyOf: ["none", "text"]))
-        XCTAssertFalse("some text".contains(anyOf: ["none", "string"]))
-    }
-}
+//class StringTests: XCTestCase {
+//    func testContains() {
+//        XCTAssertFalse("some text".contains(anyOf: [] as [String]))
+//        XCTAssertTrue("some text".contains(anyOf: ["some"]))
+//        XCTAssertTrue("some text".contains(anyOf: ["some", "text"]))
+//        XCTAssertTrue("some text".contains(anyOf: ["none", "text"]))
+//        XCTAssertFalse("some text".contains(anyOf: ["none", "string"]))
+//    }
+//}
