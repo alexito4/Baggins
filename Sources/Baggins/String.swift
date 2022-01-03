@@ -56,7 +56,7 @@ public extension StringProtocol {
                 return
             }
 
-            let accEnd = index(before: current)            
+            let accEnd = index(before: current)
             if accIndex <= accEnd {
                 res.append(String(self[accIndex...accEnd]))
             }

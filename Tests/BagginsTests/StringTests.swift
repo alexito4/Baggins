@@ -55,7 +55,7 @@ class StringTests: XCTestCase {
         XCTAssertTrue("some text".contains(anyOf: "none", "text"))
         XCTAssertFalse("some text".contains(anyOf: "none", "string"))
     }
-    
+
     func testSplitWithWord() {
         XCTAssertEqual(
             "one two three".split(withWord: "two"),
