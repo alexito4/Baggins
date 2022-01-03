@@ -9,6 +9,15 @@
           "revision": "af6ef9e25ea9b1734743fa26e14fd4589a92633a",
           "version": "1.0.0"
         }
+      },
+      {
+        "package": "UnwrapOrThrow",
+        "repositoryURL": "https://github.com/alexito4/UnwrapOrThrow",
+        "state": {
+          "branch": null,
+          "revision": "1784538bed208e932ed84a334760df82b9bcbcf4",
+          "version": "1.0.0"
+        }
       }
     ]
   },

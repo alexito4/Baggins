@@ -12,12 +12,14 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/alexito4/Flow.git", .upToNextMajor(from: "1.0.0")),
+        .package(url: "https://github.com/alexito4/UnwrapOrThrow", .upToNextMajor(from: "1.0.0")),
     ],
     targets: [
         .target(
             name: "Baggins",
             dependencies: [
                 "Flow",
+                "UnwrapOrThrow",
             ]
         ),
         .testTarget(
