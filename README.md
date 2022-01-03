@@ -10,7 +10,7 @@
 - Exported [Flow](https://github.com/alexito4/Flow)
 - `Sequence.toArray()`
 - String `leftPadding`, `isUppercase`, `isLowercase`, `contains(anyOf:)`, `split(withWord:)`
-- Unwrap
+- Exported [UnwrapOrThrow](https://github.com/alexito4/UnwrapOrThrow)
 
 # Author
 
