@@ -1,5 +1,7 @@
 # Baggins
 
+[![Build and Test](https://github.com/alexito4/Baggins/actions/workflows/ci.yml/badge.svg)](https://github.com/alexito4/Baggins/actions/workflows/ci.yml)
+
 🎒 My personal bag of holding for Swift extensions.
 
 ## Additions
