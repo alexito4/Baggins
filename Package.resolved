@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Flow",
+        "repositoryURL": "https://github.com/alexito4/Flow.git",
+        "state": {
+          "branch": null,
+          "revision": "af6ef9e25ea9b1734743fa26e14fd4589a92633a",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

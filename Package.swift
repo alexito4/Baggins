@@ -3,6 +3,7 @@ import PackageDescription
 
 let package = Package(
     name: "Baggins",
+    platforms: [.iOS(.v14), .macOS(.v10_15)],
     products: [
         .library(
             name: "Baggins",
@@ -10,12 +11,14 @@ let package = Package(
         ),
     ],
     dependencies: [
-        // .package(url: /* package url */, from: "1.0.0"),
+        .package(url: "https://github.com/alexito4/Flow.git", .upToNextMajor(from: "1.0.0")),
     ],
     targets: [
         .target(
             name: "Baggins",
-            dependencies: []
+            dependencies: [
+                "Flow",
+            ]
         ),
         .testTarget(
             name: "BagginsTests",
