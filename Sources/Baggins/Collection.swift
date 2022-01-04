@@ -22,4 +22,11 @@ public extension Collection {
 
         return self[index]
     }
+    
+    /// Wraps the collection in an optional.
+    /// If the collection is empty the resulting optional will be `nil`.
+    /// From [objc.io](https://www.objc.io/blog/2019/01/29/non-empty-collections/)
+    var nonEmpty: Self? {
+        return isEmpty ? nil : self
+    }
 }
