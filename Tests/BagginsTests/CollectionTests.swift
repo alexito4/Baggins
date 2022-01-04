@@ -15,7 +15,7 @@ class CollectionsTests: XCTestCase {
         XCTAssertEqual(array[3, default: 42], 42)
         XCTAssertEqual(array[0, default: 42], 2)
     }
-    
+
     func testNonEmpty() throws {
         XCTAssertEqual([1, 2, 3].nonEmpty, [1, 2, 3])
         XCTAssertNil([].nonEmpty)
