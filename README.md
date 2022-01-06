@@ -7,13 +7,20 @@
 ## Additions
 
 - `Bool.toggled()`
-- Safe `Collection` subscripts.
-- `Collection.nonEmpty` from [objc.io](https://www.objc.io/blog/2019/01/29/non-empty-collections/).
-- Concurrency: `Task.unsafeBlocking`
+- Safe `Collection` subscripts
+- `Collection.nonEmpty` from [objc.io](https://www.objc.io/blog/2019/01/29/non-empty-collections/)
+- Collection sorting with `KeyPath`
+- Concurrency
+  - `Task.sleep` with seconds
+  - `withTimeout`
+  - race `firstOf(_:or:)
+  - `Task.unsafeBlocking` (careful with this one!)
+
 - Exported [Flow](https://github.com/alexito4/Flow)
 - `Sequence.toArray()`
 - String `leftPadding`, `isUppercase`, `isLowercase`, `contains(anyOf:)`, `split(withWord:)`
 - Exported [UnwrapOrThrow](https://github.com/alexito4/UnwrapOrThrow)
+- Other stuff in `_Brewing.swift` which it probably shouldn't be used. Still brewing... 🧙‍♂️
 
 # Author
 
