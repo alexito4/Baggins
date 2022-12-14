@@ -48,7 +48,7 @@ final class TimeTester {
 
 class ConcurrencyTests: XCTestCase {
     // MARK: - Race
-    
+
     func testRace_Fist() async throws {
         let time = TimeTester()
 
@@ -60,10 +60,10 @@ class ConcurrencyTests: XCTestCase {
             return 99
         }
         XCTAssertEqual(value, 42)
-        
+
         time.assertElapsed(isLessThan: 1)
     }
-    
+
     func testRace_Second() async throws {
         let time = TimeTester()
 
@@ -75,10 +75,10 @@ class ConcurrencyTests: XCTestCase {
             return 99
         }
         XCTAssertEqual(value, 99)
-        
+
         time.assertElapsed(isLessThan: 1)
     }
-    
+
     func testRace_ImmediatlyCancelle1() async throws {
         let time = TimeTester()
 
@@ -91,14 +91,14 @@ class ConcurrencyTests: XCTestCase {
                 return 99
             }
         }
-            task.cancel()
+        task.cancel()
         await XCTAssertThrowsErrorAsync(try await task.value) { error in
             XCTAssertTrue(error is CancellationError, "Error is CancellationError")
         }
-        
+
         time.assertElapsed(isLessThan: 0.2)
     }
-    
+
     func testRace_ImmediatlyCancelle2() async throws {
         let time = TimeTester()
 
@@ -119,7 +119,7 @@ class ConcurrencyTests: XCTestCase {
         }
         time.assertElapsed(isLessThan: 0.2)
     }
-    
+
     func testRace_Cancel() async throws {
         let time = TimeTester()
 
@@ -141,7 +141,7 @@ class ConcurrencyTests: XCTestCase {
         }
         time.assertElapsed(isLessThan: 1.2)
     }
-    
+
     // MARK: - Timeout
 
     func testTimeout_TimesOut() async throws {
