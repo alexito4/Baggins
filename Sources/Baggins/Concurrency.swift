@@ -57,7 +57,8 @@ public extension Task where Success == Never, Failure == Never {
     ///
     /// This function doesn't block the underlying thread.
     static func sleep(seconds: Double) async throws {
-        try await sleep(nanoseconds: UInt64(seconds * Double(NSEC_PER_SEC)))
+        let nSecPerSec = 1000000000.0 // NSEC_PER_SEC is not available on Linux
+        try await sleep(nanoseconds: UInt64(seconds * nSecPerSec))
     }
 }
 
