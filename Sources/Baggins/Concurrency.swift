@@ -1,5 +1,4 @@
 import Foundation
-import XCTest
 
 // MARK: - Timeout
 
