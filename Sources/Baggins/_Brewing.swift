@@ -95,6 +95,20 @@ extension Optional {
     }
 }
 
+// MARK: Errors
+
+public struct SimpleError: Error, CustomStringConvertible {
+    let localizedDescription: String
+
+    public init(_ localizedDescription: String) {
+        self.localizedDescription = localizedDescription
+    }
+
+    public var description: String {
+        localizedDescription
+    }
+}
+
 /// Still brewing... 🧙‍♂️
 // continue with pub fn ok_or<E>(self, err: E) -> Result<T, E> but that will need to conditionally compile only if Result is available, but probably the Result library already has similar functionality?
 
